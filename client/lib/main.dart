@@ -4,8 +4,8 @@ import 'package:loader_overlay/loader_overlay.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-
-
+import 'package:client/Pages/Home/page.dart';
+import 'package:client/pages/booked/page.dart';
 import 'theme.dart';
 
 bool loggedIn = false;
@@ -40,8 +40,7 @@ class MyApp extends StatelessWidget {
       child: GetMaterialApp(
         title: 'Flutter Demo',
         theme: themeData,
-        home: Scaffold(),
-        // home: LoginScreen(),
+        home: BookedScreen(startX: 12.904785, startY: 77.579191, endX: 12.910976, endY: 77.593611),
         // home: loggedIn ? DashboardScreen() : LoginScreen(),
       ),
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-final colorScheme = ColorScheme.fromSeed(seedColor: Colors.teal);
+final colorScheme = ColorScheme.fromSeed(seedColor: Colors.lightBlueAccent);
 
 final themeData = ThemeData(
   useMaterial3: true,
@@ -35,11 +35,20 @@ final themeData = ThemeData(
   appBarTheme: AppBarTheme(
     backgroundColor: colorScheme.primary,
     foregroundColor: colorScheme.onPrimary,
+    titleTextStyle: GoogleFonts.roboto(
+      fontSize: 18,
+      fontWeight: FontWeight.bold,
+    ),
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
+      backgroundColor: colorScheme.primary,
+      foregroundColor: colorScheme.onPrimary,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      padding: EdgeInsets.symmetric(vertical: 20),
       textStyle: TextStyle(
         fontWeight: FontWeight.bold,
+        fontSize: 20,
       ),
     ),
   ),
