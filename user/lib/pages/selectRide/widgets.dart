@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:dotted_line/dotted_line.dart';
 
-import 'package:user/models/ride.dart';
+import 'package:user/models/vehicleTypes.dart';
 import 'package:user/models/hospital.dart';
 
 class Map extends StatelessWidget {
@@ -146,8 +146,8 @@ class TopRow extends StatelessWidget {
 class BottomPage extends StatelessWidget {
   const BottomPage({super.key, required this.selectedRide, this.temp, required this.handleClick});
 
-  final Rx<Ride?> selectedRide;
-  final Ride? temp;
+  final Rx<VehicleType?> selectedRide;
+  final VehicleType? temp;
   final Function handleClick;
 
   @override
@@ -183,7 +183,7 @@ class BottomPage extends StatelessWidget {
                   child: Material(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: Ride.ridesList
+                      children: VehicleType.list
                           .map(
                             (e) => InkWell(
                               onTap: () {

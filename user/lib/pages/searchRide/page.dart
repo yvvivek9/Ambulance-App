@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-import 'package:user/models/ride.dart';
+import 'package:user/models/vehicleTypes.dart';
 import 'package:user/models/hospital.dart';
 import 'controller.dart';
 import 'widgets.dart';
@@ -11,7 +11,7 @@ class SearchRideScreen extends StatelessWidget {
   SearchRideScreen({super.key, required this.selectedRide, required this.selectedHospital, required this.originLocation});
 
   final controller = Get.put(SearchRideController());
-  final Ride selectedRide;
+  final VehicleType selectedRide;
   final Hospital selectedHospital;
   final LatLng originLocation;
 

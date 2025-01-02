@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 
 from sockets import user_driver
+from routes import rides
 
 
 load_dotenv()
@@ -16,3 +17,4 @@ fastAPI.add_middleware(
 )
 
 fastAPI.include_router(user_driver.router, prefix="/ws", tags=["ws", "user", "driver"])
+fastAPI.include_router(rides.router, prefix="/ride", tags=["rides"])
