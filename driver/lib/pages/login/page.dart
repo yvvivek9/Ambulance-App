@@ -111,7 +111,7 @@ class LoginScreen extends StatelessWidget {
                           Image(
                             width: 20,
                             height: 20,
-                            image: AssetImage('assets/google.png'),
+                            image: AssetImage('assets/icons/google.png'),
                           ),
                           SizedBox(width: 15),
                           Text("Continue with Google"),

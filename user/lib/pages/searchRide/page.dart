@@ -8,7 +8,11 @@ import 'controller.dart';
 import 'widgets.dart';
 
 class SearchRideScreen extends StatelessWidget {
-  SearchRideScreen({super.key, required this.selectedRide, required this.selectedHospital, required this.originLocation});
+  SearchRideScreen({super.key, required this.selectedRide, required this.selectedHospital, required this.originLocation}) {
+    controller.originLocation = originLocation;
+    controller.selectedHospital = selectedHospital;
+    controller.sendRideToServer();
+  }
 
   final controller = Get.put(SearchRideController());
   final VehicleType selectedRide;

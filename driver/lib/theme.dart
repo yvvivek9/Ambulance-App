@@ -29,6 +29,11 @@ final themeData = ThemeData(
       fontWeight: FontWeight.w700,
       color: colorScheme.primary,
     ),
+    headlineSmall: GoogleFonts.arvo(
+      fontSize: 15,
+      fontWeight: FontWeight.w600,
+      color: colorScheme.onPrimary,
+    ),
     titleLarge: GoogleFonts.roboto(
       fontSize: 23,
       fontWeight: FontWeight.w700,

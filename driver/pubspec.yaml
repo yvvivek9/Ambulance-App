@@ -39,6 +39,7 @@ dependencies:
   get: ^4.6.6
   web_socket_channel: ^3.0.1
   http: ^1.2.2
+  url_launcher: ^6.3.1
   google_fonts: ^6.2.1
   loader_overlay: ^4.0.0
   fluttertoast: ^8.2.8
@@ -49,6 +50,7 @@ dependencies:
   strings: ^1.0.0
   dotted_line: ^3.2.3
   timelines: ^0.1.0
+  audioplayers: ^6.1.0
 
 dev_dependencies:
   flutter_test:
@@ -76,6 +78,10 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/ambigo/
+    - assets/icons/
+    - assets/sounds/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

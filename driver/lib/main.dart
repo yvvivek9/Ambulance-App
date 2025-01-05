@@ -17,12 +17,12 @@ Future<void> checkLogIn() async {
   // final token = prefs.getString("token");
   // if (token != null) loggedIn = true;
 
-  final GoogleSignIn googleSignIn = GoogleSignIn(
-    scopes: <String>[
-      'email',
-    ],
-  );
-  loggedIn = await googleSignIn.isSignedIn();
+  // final GoogleSignIn googleSignIn = GoogleSignIn(
+  //   scopes: <String>[
+  //     'email',
+  //   ],
+  // );
+  // loggedIn = await googleSignIn.isSignedIn();
 }
 
 void main() async {

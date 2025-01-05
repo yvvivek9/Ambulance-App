@@ -48,4 +48,19 @@ class Ride {
       return false;
     }
   }
+
+  static List<Ride> subtractList(List<Ride> first, List<Ride> second) {
+    return first.where((element) => !second.contains(element)).toList();
+  }
+
+  @override
+  String toString() {
+    return 'Ride{rideID: $rideID, pickupLat: $pickupLat, pickupLng: $pickupLng, dropLat: $dropLat, dropLng: $dropLng, hospital: $hospital}';
+  }
+
+  @override
+  bool operator ==(Object other) => (other is Ride && rideID == other.rideID);
+
+  @override
+  int get hashCode => rideID;
 }
