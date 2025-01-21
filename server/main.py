@@ -18,7 +18,7 @@ fastAPI.add_middleware(
     allow_headers=["*"],
 )
 
-fastAPI.include_router(user_driver.router, prefix="/ws", tags=["ws", "user", "driver"])
+# fastAPI.include_router(user_driver.router, prefix="/ws", tags=["ws", "user", "driver"])
 fastAPI.include_router(rides.router, prefix="/ride", tags=["rides"])
 
 @fastAPI.get("/")

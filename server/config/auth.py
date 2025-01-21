@@ -12,7 +12,7 @@ JWT_VALIDITY = os.getenv('JWT_VALIDITY')  # in seconds
 async def sign_jwt() -> str:
     payload = {
         "content": "sample",
-        "expires": time.time() + float(JWT_VALIDITY)
+        "expires": time.time() + float(JWT_VALIDITY),
     }
     return jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)
 

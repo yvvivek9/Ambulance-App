@@ -1,20 +1,31 @@
 from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel
-from typing import List
+import asyncio
+import random
+import threading
 
+from repos.ride import *
 from utils.response import CustomResponse
 
 router = APIRouter()
-rides = []
 
 
-class Ride(BaseModel):
-    ride_id: int
-    pickup_lat: float
-    pickup_lng: float
-    drop_lat: float
-    drop_lng: float
-    hospital: str
+class RideManager:
+    def __init__(self):
+        self.requested_rides: List[Ride] = []
+        self.ongoing_rides: List[Ride] = []
+
+    def add_request(self, ride: Ride):
+        ride.id = random.randint(1000, 10000000000)
+        self.requested_rides.append(ride)
+
+    def list_requests(self):
+        return self.requested_rides
+
+    def accept_requests(self, ride_id: int) -> bool:
+
+
+
+
 
 
 @router.post("/add")
